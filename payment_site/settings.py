@@ -12,10 +12,11 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-your-default-secret-key')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
-    'your-render-app-url.onrender.com',  # Replace with your Render app URL
-    'localhost',  # For local testing
-    '127.0.0.1',  # For local testing
-]
+       'payment-oj4c.onrender.com',  # Your Render domain
+       'yourcustomdomain.com',       # Your custom domain (if applicable)
+       'localhost',                  # For local development
+       '127.0.0.1',                  # For local development
+   ]
 
 # Application definition
 INSTALLED_APPS = [
