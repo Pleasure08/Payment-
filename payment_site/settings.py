@@ -5,7 +5,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'your-secret-key'  # Replace with your actual secret key
+SECRET_KEY = 's2kcg!!+0ren6vi$klyl$dzv$!!t%-^js+)bce1+08l&c#w_r6'  # Replace with your actual secret key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True  # Set to False in production
@@ -91,6 +91,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Add this line
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media files (uploads)
