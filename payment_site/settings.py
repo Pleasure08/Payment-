@@ -1,22 +1,20 @@
 import os
-import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-your-default-secret-key')
+SECRET_KEY = 'your-secret-key'  # Replace with your actual secret key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = True  # Set to False in production
 
 ALLOWED_HOSTS = [
-       'payment-oj4c.onrender.com',  # Your Render domain
-       'yourcustomdomain.com',       # Your custom domain (if applicable)
-       'localhost',                  # For local development
-       '127.0.0.1',                  # For local development
-   ]
+    'payment-oj4c.onrender.com',  # Your Render domain
+    'localhost',                  # For local development
+    '127.0.0.1',                  # For local development
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -31,7 +29,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # For static files
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # For serving static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -62,9 +60,10 @@ WSGI_APPLICATION = 'payment_site.wsgi.application'
 
 # Database
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgres://user:password@localhost:5432/dbname')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',  # Use PostgreSQL in production
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 # Password validation
