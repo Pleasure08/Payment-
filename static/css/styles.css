@@ -56,97 +56,26 @@ form {
     background-color: #2575fc;
     border: none;
     border-radius: 8px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
     background-color: #1a5bbf;
     transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:active {
     transform: translateY(0);
-}
-
-/* Header Styles */
-h2.card-title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Input Group Styles */
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #555;
-}
-
-/* Custom Checkbox Styles */
-.custom-checkbox {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.custom-checkbox input {
-    margin-right: 10px;
-    width: 18px;
-    height: 18px;
-    accent-color: #2575fc;
-}
-
-.custom-checkbox label {
-    font-size: 14px;
-    color: #555;
-}
-
-/* Footer Styles */
-.footer {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-}
-
-.footer a {
-    color: #2575fc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: #1a5bbf;
-}
-
-/* Animation Styles */
-.animate__animated {
-    animation-duration: 1s;
-}
-
-.animate__fadeInUp {
-    animation-name: fadeInUp;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Styles */
@@ -163,55 +92,5 @@ h2.card-title {
     .btn-primary {
         font-size: 14px;
         padding: 8px 16px;
-    }
-}
-
-/* Custom Scrollbar Styles */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #2575fc;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #1a5bbf;
-}
-
-/* Hover Effects for Links */
-a {
-    color: #2575fc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #1a5bbf;
-}
-
-/* Loading Spinner (Optional) */
-.loading-spinner {
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #2575fc;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
     }
 }

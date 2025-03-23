@@ -43,7 +43,7 @@ ROOT_URLCONF = 'payment_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Add this line
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,10 +83,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
-USE_I18N = True
-USE_TZ = True
+# settings.py
+
+TIME_ZONE = 'UTC'  # Default timezone
+USE_TZ = True      # Enable timezone support
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'

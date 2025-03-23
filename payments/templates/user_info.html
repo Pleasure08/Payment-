@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>User Information - Brand Name</title>
+       <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+   </head>
+   <body>
+       <div class="container d-flex justify-content-center align-items-center vh-100">
+           <div class="card shadow-lg p-4" style="width: 100%; max-width: 500px;">
+               <h2 class="card-title text-center mb-4">User Information</h2>
+               <form method="post" action="{% url 'payment_method' %}">
+                   {% csrf_token %}
+                   <div class="mb-3">
+                       <label for="full_name" class="form-label">Full Name</label>
+                       <input type="text" class="form-control" id="full_name" name="full_name" required>
+                   </div>
+                   <div class="mb-3">
+                       <label for="matric_number" class="form-label">Matric Number</label>
+                       <input type="text" class="form-control" id="matric_number" name="matric_number" required>
+                   </div>
+                   <div class="mb-3">
+                       <label for="phone_number" class="form-label">Phone Number</label>
+                       <input type="tel" class="form-control" id="phone_number" name="phone_number" required>
+                   </div>
+                   <div class="mb-3">
+                       <label for="email" class="form-label">Email Address</label>
+                       <input type="email" class="form-control" id="email" name="email" required>
+                   </div>
+                   <button type="submit" class="btn btn-primary w-100">Proceed to Payment</button>
+               </form>
+           </div>
+       </div>
+   </body>
+   </html>

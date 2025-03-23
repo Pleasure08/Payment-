@@ -1,0 +1,27 @@
+{% load static %}
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Student Payment Portal</title>
+       <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+   </head>
+   <body>
+       <div class="container">
+           <h1>Student Payment Portal</h1>
+           <form method="post" action="{% url 'payment_view' %}">
+               {% csrf_token %}
+               <div class="form-group">
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" name="email" placeholder="Enter your email" required>
+               </div>
+               <div class="form-group">
+                   <label for="amount">Amount (⭐):</label>
+                   <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+               </div>
+               <button type="submit" class="btn">Pay Now</button>
+           </form>
+       </div>
+   </body>
+   </html>

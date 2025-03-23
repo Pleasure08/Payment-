@@ -1,49 +1,96 @@
+/* General Body Styles */
 body {
-       font-family: Arial, sans-serif;
-       background: #f4f4f4;
-       margin: 0;
-       padding: 20px;
-       display: flex;
-       justify-content: center;
-       min-height: 100vh;
-   }
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-   .container {
-       background: white;
-       padding: 20px;
-       border-radius: 8px;
-       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-       width: 100%;
-       max-width: 400px;
-   }
+/* Card Styles */
+.card {
+    border-radius: 15px;
+    border: none;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-   h1 {
-       color: #333;
-       text-align: center;
-   }
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
 
-   input, button {
-       width: 100%;
-       padding: 10px;
-       margin: 10px 0;
-       border: 1px solid #ddd;
-       border-radius: 4px;
-       box-sizing: border-box;
-   }
+/* Form Styles */
+form {
+    padding: 20px;
+}
 
-   button {
-       background: #28a745;
-       color: white;
-       border: none;
-       cursor: pointer;
-   }
+.form-label {
+    font-weight: 600;
+    color: #555;
+}
 
-   button:hover {
-       background: #218838;
-   }
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-   #loading {
-       text-align: center;
-       margin-top: 20px;
-       color: #555;
-   }
+.form-control:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+    outline: none;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #2575fc;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #1a5bbf;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    h2.card-title {
+        font-size: 20px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

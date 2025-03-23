@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Payment Details - Brand Name</title>
+       <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+   </head>
+   <body>
+       <div class="container d-flex justify-content-center align-items-center vh-100">
+           <div class="card shadow-lg p-4" style="width: 100%; max-width: 500px;">
+               <h2 class="card-title text-center mb-4">Payment Details</h2>
+               <form method="post" action="{% url 'payment_success' %}">
+                   {% csrf_token %}
+                   <div class="mb-3">
+                       <label for="payment_purpose" class="form-label">Payment Purpose</label>
+                       <input type="text" class="form-control" id="payment_purpose" name="payment_purpose" required>
+                   </div>
+                   <div class="mb-3">
+                       <label for="amount" class="form-label">Amount (¥)</label>
+                       <input type="number" class="form-control" id="amount" name="amount" required>
+                   </div>
+                   <button type="submit" class="btn btn-primary w-100">Pay Now</button>
+               </form>
+           </div>
+       </div>
+   </body>
+   </html>
